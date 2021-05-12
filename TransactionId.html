@@ -41,21 +41,35 @@ License: You must have a valid license purchased only from themeforest(the above
 }
 
 .row {
-  margin-left:-5px;
-  margin-right:-5px;
+      margin-left: -5px;
+    margin-right: -5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-  
+   table {
+        border-collapse: separate;
+        border-spacing: 0 15px;
+      }
+
+{
+  box-sizing: border-box;
+}
+
 .column {
   float: left;
-  width: 50%;
+  width: 33.33%;
   padding: 5px;
 }
 
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
-
-
 </style>
 </head>
 <!--end::Head-->
@@ -453,6 +467,7 @@ tr:nth-child(even) {
     <div class="form-group">
                         <h4 class="mb-1 mt-0">User Details</h4> 
                     </div>
+  
                     
                     <div class="form schedule-assessment">
                         <div class="margin-top-l">
@@ -472,10 +487,16 @@ tr:nth-child(even) {
                             <div class="form-group">
                                 <label class="form-control-label">Location: </label>Ambattur  
                             </div>
+                            
+                           <!-- <div>
+                           <img class="hw-23" src="card1.jpg" alt="Front Card Picture">
+                           </div> -->
                         </div>
 
-                                    </div>
-  </div>
+                        </div>
+
+                       </div>
+
   <div class="column">
    <div class="table-responsive" >
     <div class="form-group"> 
@@ -498,16 +519,34 @@ tr:nth-child(even) {
                                 </td>
                             </tr>
                             <tr>
-                                <td><img class="hw-23" src="card1.jpg" alt="Front Card Picture"></td>
+                                <!-- <td><img class="hw-23" src="card1.jpg" alt="Front Card Picture"></td> -->
                                 <td></td>
-                                <td><img class="hw-23" src="card2.jpg" alt="Back Card Picture"></td>
+                                <!-- <td><img class="hw-23" src="card2.jpg" alt="Back Card Picture"></td> -->
                             </tr>
+
                         </tbody>
                     </table>
+                    <!-- <div class="form-group">
+                           <img class="hw-23" src="card2.jpg" alt="Front Card Picture">
+                           </div> -->
   </div>
-  </div>
-</div> 
+    </div>
+ </div> 
 
+<!--  --> 
+   <div class="row">
+   
+  <div class="column">
+  <h4 >Card Front Image</h4>
+    <img src="card1.jpg" alt="Snow" style="width:100%">
+  </div>
+  
+  <div class="column"><h4 >Card Back Image</h4>
+    <img src="card2.jpg" alt="Forest" style="width:100%">
+  </div>
+  
+</div>
+<!--  --> 
 
   <!--     -->
 
