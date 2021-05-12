@@ -35,6 +35,28 @@ License: You must have a valid license purchased only from themeforest(the above
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+  
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+</style>
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -421,15 +443,17 @@ License: You must have a valid license purchased only from themeforest(the above
 <!--begin::TransactionId--> 
              <div class="content-page mb-5">
     <div class="content">
-        <!-- <div class="container-fluid"> -->
+        
          <div class="container">
 
-                <div class="form-group">
 
-                    <!-- <div class="col-sm-4 col-xl-6"> -->
+<div class="row">
+  <div class="column">
+   
+    <div class="form-group">
                         <h4 class="mb-1 mt-0">User Details</h4> 
-                        <!-- <br> -->
                     </div>
+                    
                     <div class="form schedule-assessment">
                         <div class="margin-top-l">
                             <div class="form-group">
@@ -450,17 +474,14 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                         </div>
 
-                    <!-- </div> -->
-                </div>
-                <br>
-<div class="table-responsive" >
-                <div class="form-group">
-                    <!-- <div class="col-sm-4 col-xl-6"> -->
+                                    </div>
+  </div>
+  <div class="column">
+   <div class="table-responsive" >
+    <div class="form-group"> 
                         <h4 class="mb-1 mt-0">Card Details</h4>
-                        <!-- <br> -->
                     </div>
- 
-                    <table>
+    <table>
                         <tbody>
                             <tr><td class="font-weight-bold">Customer Name</td><td></td><td> Vignesh Raj</td></tr>
                             <tr><td class="font-weight-bold">Agent Reffered </td><td></td><td>No </td></tr>
@@ -483,31 +504,13 @@ License: You must have a valid license purchased only from themeforest(the above
                             </tr>
                         </tbody>
                     </table>
-                    </div>
-                    <!-- <table>
-                        <tbody>
-                            <td class="font-weight-bold">Customer Name</td><td></td><td> Balaji Balaji</td>
-                            <tr><td class="font-weight-bold">Agent Reffered </td><td></td><td>No </td></tr>
-                            <tr><td class="font-weight-bold">Card No</td><td></td><td> 1326549873216540</td></tr>
-                            <tr><td class="font-weight-bold">Card Brand</td><td></td><td> Visa</td></tr>
-                            <tr><td class="font-weight-bold">Card Type </td><td></td><td>Normal</td></tr>
-                            <tr>
-                                <td class="font-weight-bold">
-                                    Card Front Image
-                                </td>
-                                <td></td>
-                                <td class="font-weight-bold">
-                                    Card Back Image
-                                </td>   
-                            </tr>
-                            <tr>
-                                <td><img class="hw-23" src="card1.jpg" alt="Front Card Picture"></td>
-                                <td></td>
-                                <td><img class="hw-23" src="card2.jpg" alt="Back Card Picture"></td>
-                            </tr>
-                        </tbody>
-                    </table> -->
-                <!-- </div> -->
+  </div>
+  </div>
+</div> 
+
+
+  <!--     -->
+
                     <div class="w3-container">
                         <div class="col-sm-4 col-xl-6">
                             <h4 class="mb-1 mt-0"> Card Charge Details</h4>
@@ -551,8 +554,8 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
 <br>
-                <div class="form-group">
-                    <!-- <div class="col-sm-4 col-xl-6"> -->
+                <div class="row page-title align-items-center">
+                    <div class="col-sm-4 col-xl-6">
                         <h4 class="mb-1 mt-0">Transaction Request Details</h4>
                     </div>
                     <div class="form schedule-assessment">
@@ -590,7 +593,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 Created
                             </div>
 
-                        <!-- </div> -->
+                        </div>
 
                     </div>
                 </div>
