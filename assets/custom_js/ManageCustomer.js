@@ -7,44 +7,44 @@ var KTDatatableDataLocalDemo = function() {
   // demo initializer
   var demo = function() {
     var dataJSONArray = JSON.parse(
-        '[{"RecordID":1,"FirstName":"Kulgaurav","LastName":"Singh","MobileNumber":"8840279971","WhatsappNumber":"8840279971","Location":1,"isactivated":1, "agent":"Madhumala Nayak","Actions":null},\n' +
+        '[{"RecordID":1,"FirstName":"Kulgaurav","LastName":"Singh","MobileNumber":"8840279971","WhatsappNumber":"8840279971","Location":1,"isactivated":1, "agent":1,"Actions":null},\n' +
 
         				
-        '{"RecordID":2,"FirstName":null,"LastName":null,"MobileNumber":"0","WhatsappNumber":"0","Location":5,"isactivated":2, "agent":null,"Actions":null},\n' +
+        '{"RecordID":2,"FirstName":null,"LastName":null,"MobileNumber":"0","WhatsappNumber":"0","Location":5,"isactivated":2, "agent":2,"Actions":null},\n' +
 
-        '{"RecordID":3,"FirstName":"Madhumala","LastName":"Nayak","MobileNumber":"8093528727","WhatsappNumber":"8895602966","Location":2,"isactivated":1, "agent":null,"Actions":null},\n' +
+        '{"RecordID":3,"FirstName":"Madhumala","LastName":"Nayak","MobileNumber":"8093528727","WhatsappNumber":"8895602966","Location":2,"isactivated":1, "agent":5,"Actions":null},\n' +
 
         
         
-        '{"RecordID":4,"FirstName":"1","LastName":"2","MobileNumber":"9445944601","WhatsappNumber":"9445944603","Location":3,"isactivated":1, "agent":null,"Actions":null},\n' +
+        '{"RecordID":4,"FirstName":"1","LastName":"2","MobileNumber":"9445944601","WhatsappNumber":"9445944603","Location":3,"isactivated":1, "agent":5,"Actions":null},\n' +
 
 
-        '{"RecordID":5,"FirstName":"Mercy","LastName":"Amaravathi","MobileNumber":"9445944602","WhatsappNumber":"9445944602","Location":3,"isactivated":1, "agent":null,"Actions":null},\n' +
+        '{"RecordID":5,"FirstName":"Mercy","LastName":"Amaravathi","MobileNumber":"9445944602","WhatsappNumber":"9445944602","Location":3,"isactivated":1, "agent":3,"Actions":null},\n' +
 
-        '{"RecordID":6,"FirstName":null,"LastName":null,"MobileNumber":"0","WhatsappNumber":"0","Location":5,"isactivated":2, "agent":null,"Actions":null},\n' +
+        '{"RecordID":6,"FirstName":null,"LastName":null,"MobileNumber":"0","WhatsappNumber":"0","Location":5,"isactivated":2, "agent":5,"Actions":null},\n' +
        
         			
         
-        '{"RecordID":7,"FirstName":"Vishnu"	,"LastName":"Priya","MobileNumber":null,"WhatsappNumber":"","Location":3,"isactivated":1, "agent":null,"Actions":null},\n' +
+        '{"RecordID":7,"FirstName":"Vishnu"	,"LastName":"Priya","MobileNumber":null,"WhatsappNumber":"","Location":3,"isactivated":1, "agent":5,"Actions":null},\n' +
         
-        '{"RecordID":8,"FirstName":"1"	,"LastName":"2","MobileNumber":"9445944601","WhatsappNumber":"9445944603","Location":3,"isactivated":1, "agent":null,"Actions":null},\n' +
+        '{"RecordID":8,"FirstName":"1"	,"LastName":"2","MobileNumber":"9445944601","WhatsappNumber":"9445944603","Location":3,"isactivated":1, "agent":5,"Actions":null},\n' +
 
 
-        '{"RecordID":9,"FirstName":""	,"LastName":"","MobileNumber":"0","WhatsappNumber":"0","Location":5,"isactivated":2, "agent":null,"Actions":null},\n' +
+        '{"RecordID":9,"FirstName":""	,"LastName":"","MobileNumber":"0","WhatsappNumber":"0","Location":5,"isactivated":2, "agent":5,"Actions":null},\n' +
         
-        '{"RecordID":9,"FirstName":"Vikash"	,"LastName":"Raj","MobileNumber":"9445944601","WhatsappNumber":"9445944601","Location":3,"isactivated":1, "agent":null,"Actions":null},\n' +
+        '{"RecordID":9,"FirstName":"Vikash"	,"LastName":"Raj","MobileNumber":"9445944601","WhatsappNumber":"9445944601","Location":3,"isactivated":1, "agent":5,"Actions":null},\n' +
 
-        '{"RecordID":10,"FirstName":"Vignesh"	,"LastName":"Raj","MobileNumber":"9445944603","WhatsappNumber":"9445944603","Location":3,"isactivated":1, "agent":null,"Actions":null},\n' +
+        '{"RecordID":10,"FirstName":"Vignesh"	,"LastName":"Raj","MobileNumber":"9445944603","WhatsappNumber":"9445944603","Location":3,"isactivated":1, "agent":5,"Actions":null},\n' +
 
 
-        '{"RecordID":11,"FirstName":""	,"LastName":"","MobileNumber":"0","WhatsappNumber":"0","Location":5,"isactivated":2, "agent":null,"Actions":null},\n' +
-
-        
+        '{"RecordID":11,"FirstName":""	,"LastName":"","MobileNumber":"0","WhatsappNumber":"0","Location":5,"isactivated":2, "agent":5,"Actions":null},\n' +
 
         
-        '{"RecordID":12,"FirstName":"Rani"	,"LastName":"Rani","MobileNumber":"9445944602","WhatsappNumber":"9445944602","Location":3,"isactivated":1, "agent":"Mercy Amaravathi","Actions":null},\n' +
 
-        '{"RecordID":15,"FirstName":null,"LastName":null,"MobileNumber":"0","WhatsappNumber":"0","Location":5,"isactivated":2, "agent":null,"Actions":null}]');
+        
+        '{"RecordID":12,"FirstName":"Rani"	,"LastName":"Rani","MobileNumber":"9445944602","WhatsappNumber":"9445944602","Location":3,"isactivated":1, "agent":5,"Actions":null},\n' +
+
+        '{"RecordID":15,"FirstName":null,"LastName":null,"MobileNumber":"0","WhatsappNumber":"0","Location":5,"isactivated":2, "agent":5,"Actions":null}]');
 
     var datatable = $('#kt_datatable').KTDatatable({
       // datasource definition
@@ -123,13 +123,43 @@ var KTDatatableDataLocalDemo = function() {
                 },
                 
               };
-              return '<span class="font-weight-bold text-' + status[row.Location].state + '">' +
+              return '<span class="font-weight-bold text' + status[row.Location]+ '">' +
                   status[row.Location].title + '</span>';
             },
           }, {
             field: 'agent',
             title: 'Agent',
             textAlign: 'center',
+            template: function(row) {
+              
+                var status = {
+                  1: {
+                    'title': 'Madhumala Nayak',
+                   
+                  },
+                  2: {
+                    'title': 'Balaji Balaji',
+                   
+                  },
+                  3: {
+                    'title': 'Mercy Amaravathi',
+                   
+                  },
+                  4: {
+                    'title': 'Vikash',
+                  },
+                  5: {
+                    'title': '',
+                  },
+                  
+                };
+
+              return ' <a href="Details.html" class="font-weight-bold ' +status[row.agent]+ '">' +status[row.agent].title + '</a>';
+
+              
+            },
+
+
         },{
           field: 'isactivated',
           title: 'IsActivated',
