@@ -264,7 +264,7 @@ var KTDatatableDataLocalDemo2 = function () {
 
 
           };
-          return '<input type="number" value="'+status[row.one].title+'">';
+        return '<input type="number" style="width:100%; padding:2px; border: 1px solid #ccc; border-radius: 4px; box-sizing:border-box; resize:vertical;" value="'+status[row.one].title+'">';
         },
 
         },
@@ -293,7 +293,7 @@ var KTDatatableDataLocalDemo2 = function () {
 
 
           };
-          return '<input type="number" value="'+status[row.two].title+'">';
+           return '<input type="number" style="width:100%; padding:2px; border: 1px solid #ccc; border-radius: 4px; box-sizing:border-box; resize:vertical;" value="'+status[row.two].title+'">';
         },
 
 
@@ -323,7 +323,7 @@ var KTDatatableDataLocalDemo2 = function () {
 
 
           };
-          return '<input type="number" value="'+status[row.three].title+'">';
+           return '<input type="number" style="width:100%; padding:2px; border: 1px solid #ccc; border-radius: 4px; box-sizing:border-box; resize:vertical;" value="'+status[row.three].title+'">';
         },
         
       },
