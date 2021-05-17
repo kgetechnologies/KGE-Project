@@ -142,7 +142,7 @@ var KTDatatableDataLocalDemo = function () {
         template: function() {
           return '\
                          \
-                          <a href="javascript:;" class="btn btn-sm btn-clean text-primary btn-icon mr-2" title="Details">\
+                          <a href="DetailsAgent.html" class="btn btn-sm btn-clean text-primary btn-icon mr-2" title="Details">\
                               <span class="svg-icon svg-icon-md">\
                                  More Details\
                               </span>\
